@@ -31,7 +31,7 @@ $(document).ready(function(){
 
   $("form").on("submit", function(){
   	event.preventDefault();
-
+    $("#submitButton").addClass("disabled");
     var stuff = $form.serializeObject();
     stuff.date = today;
     stuff.product = product;
@@ -48,7 +48,6 @@ $(document).ready(function(){
           $("#submitButton").removeClass("pink");
           $("#submitButton").removeClass("lighten-3");
           $("#submitButton").text("Response Sent");
-          $("#submitButton").addClass("disabled");
       }
     })
   })
